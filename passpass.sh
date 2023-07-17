@@ -186,6 +186,7 @@ while true; do
             
             
             # Print the results
+            echo
             echo -e "${GREEN}Amazing! it's an strong password!${RESET}" 
             echo -e "${CYAN}Password length: $(get_password_length "$password")${RESET}"
             echo -e "${CYAN}Uppercase letters: $uppercase_count${RESET}"
