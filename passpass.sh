@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-# ASCII art for welcome to systeminfo
+# ASCII art for passpass
 cat << "EOF"
     ____                  ____                 
    / __ \____ ___________/ __ \____ ___________
@@ -41,7 +41,6 @@ display_menu() {
         printf "${GREEN}%-10s ${YELLOW}%-10s${RESET}\n" "Quit" "Exit from the tool"
 }
 
-# Function to generate a random password
 # Function to generate a random password
 generate_password() {
     local password=""
