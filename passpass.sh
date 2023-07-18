@@ -198,7 +198,7 @@ while true; do
           2)
             # Generate Random Password
             random_password=$(generate_password)
-            echo $password > /tmp/passpass
+            echo $random_password > /tmp/passpass
             echo
             echo -e "${MAGENTA}Random password is saved at /tmp/passpass${RESET}"
             ;;
