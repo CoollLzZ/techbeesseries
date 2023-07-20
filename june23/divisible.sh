@@ -1,14 +1,14 @@
-#!binbash
+#!/bin/bash
 
 # Function to animate text output on shell.
 animate_text() {
-    local text=$1
+    local text="$1"
     local delay=0.05
 
 
-    for ((i = 0; i  ${#text}; i++)); do
-        echo -n ${texti1}
-        sleep $delay
+    for ((i = 0; i < ${#text}; i++)); do
+        echo -n "${text:i:1}"
+        sleep "$delay"
     done
 
     echo
@@ -27,14 +27,14 @@ is_integer() {
 
 # Prompting the message as animated text.
 echo
-animate_text Initiating number analysis. Determining if input value is divisible by 3 and 5.
+animate_text "Initiating number analysis. Determining if input value is divisible by 3 and 5."
 
 # Declaring a boolean flag for while loop.
 valid_input=false
 
 # Loop will iterate until the valid input is not given.
 while ! $valid_input; do
-        animate_text Please enter your number
+        animate_text "Please enter your number:"
         echo
 
         # Prompt the user for a number
@@ -42,19 +42,18 @@ while ! $valid_input; do
         echo
 
         # Validating the input is an integer only.
-        if is_integer $number; then
+        if is_integer "$number"; then
                 # Checking the number is Divisible by 3 & 5 Both or not.
                 if (( number % 3 == 0 && number % 5 == 0 )); then
-                        animate_text DIVISIBLE
+                        animate_text "DIVISIBLE"
                         echo
                 else
-                        animate_text NOT DIVISIBLE
+                        animate_text "NOT DIVISIBLE"
                         echo
                 fi
                 valid_input=true
         else
-                animate_text Invalid input. Please enter a valid number.
+                animate_text "Invalid input. Please enter a valid number."
                 echo
         fi
 done
-
