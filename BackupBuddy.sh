@@ -97,7 +97,7 @@ create_single_file_backup() {
     esac
 
 
-    echo "Backup created: $backup_path/$backup_name"
+    echo -e "${GREEN}Backup created: $backup_path/$backup_name${RESET}"
 }
 
 # Function to create a multiple file tar backup with compression choice
@@ -160,7 +160,7 @@ create_multiple_files_backup() {
             ;;
     esac
 
-    echo "Backup created: $backup_path/$backup_name"
+    echo -e "${GREEN}Backup created: $backup_path/$backup_name${RESET}"
 }
 
 # Loop until user enters 'q' or 'quit'
